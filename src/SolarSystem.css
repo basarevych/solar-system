@@ -1,0 +1,36 @@
+.solar-system {
+  margin: 0 auto;
+  position: relative;
+}
+
+.solar-system__sun {
+  fill: #FF8042;
+  stroke: #a90000;
+  stroke-width: 2;
+}
+
+.solar-system__orbit {
+  fill: none;
+  stroke: #cccccc;
+  stroke-width: 1;
+}
+
+.solar-system__planet {
+  fill: #8884d8;
+  stroke: #6864b8;
+  stroke-width: 1;
+}
+
+.solar-system__planet:hover {
+  fill: #a8a4f8;
+  stroke: #000000;
+}
+
+.solar-system__popup {
+  position: absolute;
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+  padding: 1em;
+  background: rgba(169, 0, 0, 0.1);
+  color: #a90000;
+}
