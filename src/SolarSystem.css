@@ -4,9 +4,12 @@
 }
 
 .solar-system__sun {
-  fill: #FF8042;
+  fill: url(#sunGradient);
+}
+
+.solar-system__sun:hover {
   stroke: #a90000;
-  stroke-width: 2;
+  stroke-width: 1;
 }
 
 .solar-system__orbit {
@@ -16,14 +19,11 @@
 }
 
 .solar-system__planet {
-  fill: #8884d8;
-  stroke: #6864b8;
-  stroke-width: 1;
+  fill: url(#planetGradient1);
 }
 
 .solar-system__planet:hover {
-  fill: #a8a4f8;
-  stroke: #000000;
+  fill: url(#planetGradient2);
 }
 
 .solar-system__popup {
@@ -31,6 +31,6 @@
   transform: translate3d(-50%, -50%, 0);
   pointer-events: none;
   padding: 1em;
-  background: rgba(169, 0, 0, 0.1);
-  color: #a90000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
 }

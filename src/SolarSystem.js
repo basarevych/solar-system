@@ -7,6 +7,7 @@ class SolarSystem extends React.PureComponent {
     width: PropTypes.number.isRequired,
     rings: PropTypes.number.isRequired,
     data: PropTypes.array.isRequired,
+    defs: PropTypes.node,
     sun: PropTypes.object,
     orbit: PropTypes.object,
     planet: PropTypes.object,
@@ -14,9 +15,28 @@ class SolarSystem extends React.PureComponent {
   };
 
   static defaultProps = {
-    sun: { r: 30 },
-    orbit: {},
-    planet: { r: 20 },
+    defs: ( // svg defs
+      <defs>
+        <radialGradient id="sunGradient" cx="25%" cy="25%" r="95%">
+          <stop offset="10%" stop-color="#FF8042"/>
+          <stop offset="90%" stop-color="#a90000"/>
+          <stop offset="100%" stop-color="#000000"/>
+        </radialGradient>
+        <radialGradient id="planetGradient1" cx="25%" cy="25%" r="95%">
+          <stop offset="10%" stop-color="#5cabff"/>
+          <stop offset="90%" stop-color="#1D3449"/>
+          <stop offset="100%" stop-color="#000000"/>
+        </radialGradient>
+        <radialGradient id="planetGradient2" cx="25%" cy="25%" r="95%">
+          <stop offset="10%" stop-color="#ECF3FF"/>
+          <stop offset="90%" stop-color="#4178B1"/>
+          <stop offset="100%" stop-color="#264563"/>
+        </radialGradient>
+      </defs>
+    ),
+    sun: { r: 30 }, // svg props
+    orbit: {}, // svg props
+    planet: { r: 20 }, // svg props
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -157,6 +177,7 @@ class SolarSystem extends React.PureComponent {
           viewBox={`0 0 ${this.props.width} ${this.props.width}`}
           xmlns="http://www.w3.org/2000/svg"
         >
+          {this.props.defs}
           <circle
             className="solar-system__sun"
             cx={this.state.centerX}
