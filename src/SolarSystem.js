@@ -23,14 +23,14 @@ class SolarSystem extends React.PureComponent {
           <stop offset="100%" stop-color="#000000"/>
         </radialGradient>
         <radialGradient id="planetGradient1" cx="25%" cy="25%" r="95%">
-          <stop offset="10%" stop-color="#5cabff"/>
-          <stop offset="90%" stop-color="#1D3449"/>
+          <stop offset="10%" stop-color="#ffffff"/>
+          <stop offset="90%" stop-color="#333333"/>
           <stop offset="100%" stop-color="#000000"/>
         </radialGradient>
         <radialGradient id="planetGradient2" cx="25%" cy="25%" r="95%">
-          <stop offset="10%" stop-color="#ECF3FF"/>
-          <stop offset="90%" stop-color="#4178B1"/>
-          <stop offset="100%" stop-color="#264563"/>
+          <stop offset="10%" stop-color="#ffffff"/>
+          <stop offset="90%" stop-color="#cccccc"/>
+          <stop offset="100%" stop-color="#000000"/>
         </radialGradient>
       </defs>
     ),
